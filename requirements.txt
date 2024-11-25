@@ -1,0 +1,2 @@
+pywin32==308
+requests==2.32.3
