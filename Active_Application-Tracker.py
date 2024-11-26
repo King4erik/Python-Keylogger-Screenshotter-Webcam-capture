@@ -4,7 +4,7 @@ import psutil
 import requests
 import time
 
-url = "https://discord.com/api/webhooks/1310921648391585802/xHRRU3TDvd3PNVsE6EF8eQfgHtXjoLzY6d-vpzs8jb4BF1CLnpw7cxvx0-Jtihwl5tTH"
+url = YOUR DISCORD WBEHOOK
 
 def get_active_window():
     active_window = win32gui.GetForegroundWindow()
