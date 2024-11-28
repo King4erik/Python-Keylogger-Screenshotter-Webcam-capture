@@ -1,1 +1,1 @@
-This combines my other 3 projects: Keylogger, screenshotter and windows application opening tracker into one projects.
+This combines my other 2 projects: Keylogger and screenshotter into one projects.
