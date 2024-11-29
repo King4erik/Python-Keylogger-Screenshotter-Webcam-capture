@@ -1,0 +1,2 @@
+PyAudio==0.2.14
+requests==2.32.3
